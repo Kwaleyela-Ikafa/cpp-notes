@@ -25,3 +25,32 @@ int main()
     GradeBook myGradeBook; // create object of the class GradeBook called myGradeBook
     myGradeBook.displayMessage(); // call objects displayMessage function
 }
+
+// Classes with parameters
+
+#include <iostream>
+using namespace std;
+
+class GradeBook
+{
+public:
+
+    void displayMessage(string courseName)
+    {
+        cout << "Welcome to the grade book for\n" << courseName << endl;
+    }
+
+};
+
+// Function main to begin program execution
+int main()
+{
+    string nameOfCourse; // String variable to be passed to member function parameters
+    GradeBook myGradeBook; // create object of the class GradeBook called myGradeBook
+
+    cout << "Please enter the course name:" << endl;
+    getline(cin, nameOfCourse); // read full line with whitespace
+    cout << endl;
+
+    myGradeBook.displayMessage(nameOfCourse); // Pass variable value to member function parameter
+}
